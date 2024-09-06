@@ -4,7 +4,7 @@
 }
 
 .gameboard {
-    display: grid;
+    display: none;
     grid-template-columns: repeat(3, 1fr);
     gap: 0;
     width: 600px;
@@ -20,6 +20,8 @@
     font-size: 48px;
     font-weight: 700;
     font-family: 'Courier New', Courier, monospace;
+    color: #f6511d;
+    
 }
 
 .xo {
@@ -48,6 +50,7 @@
     font-weight: 600;
     margin: 24px;
     color: #f6511d;
+   
 }
 
 .title {
@@ -55,8 +58,18 @@
     font-weight: 600;
     margin: 24px;
     color: #f6511d;
+    filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.3));
 }
 
 html {
     background-color: blanchedalmond;
+}
+
+.active {
+    display: grid;
+}
+
+.playerName {
+    color: #f6511d;
+    
 }

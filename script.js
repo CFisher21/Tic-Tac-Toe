@@ -1,8 +1,18 @@
 let currentPlayer = 'X'; 
+let player1;
+let player2;
 
 function switchPlayer() {
     currentPlayer = (currentPlayer === 'X') ? 'O' : 'X';
     document.getElementById('currentPlayer').textContent = currentPlayer; 
+    console.log('Outside:', player1, player2)
+    if(currentPlayer === "X") {
+        document.getElementById('playerName').textContent = player1
+        console.log('Inside:', player1, player2)
+    } else {
+        document.getElementById('playerName').textContent = player2
+    }
+    
 }
 
 const gameplaces = document.querySelectorAll('.gameplace');
@@ -56,6 +66,27 @@ function checkWin() {
       }
         return null
 }
+
+const start = document.getElementById('start');
+const gameboard = document.getElementById('gameboard');
+
+start.addEventListener('click', () => {
+
+    
+    
+    gameboard.classList.toggle('active');
+
+    player1 = prompt('Player 1 Name: ')
+    player2 = prompt('Player 2 Name: ')
+
+   
+
+    if(player1 != null && player2 != null) {
+        document.getElementById('playerName').textContent = player1
+        return player1, player2
+    }
+
+})
 
 
 
