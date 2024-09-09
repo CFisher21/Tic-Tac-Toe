@@ -1,6 +1,6 @@
 let currentPlayer = 'X'; 
-let player1;
-let player2;
+let player1; 
+let player2; 
 
 function switchPlayer() {
     currentPlayer = (currentPlayer === 'X') ? 'O' : 'X';
@@ -69,25 +69,24 @@ function checkWin() {
 
 const start = document.getElementById('start');
 const gameboard = document.getElementById('gameboard');
+const restart = document.getElementById('restart');
 
 start.addEventListener('click', () => {
-
-    
-    
-    gameboard.classList.toggle('active');
 
     player1 = prompt('Player 1 Name: ')
     player2 = prompt('Player 2 Name: ')
 
-   
-
     if(player1 != null && player2 != null) {
+        gameboard.classList.toggle('active');
         document.getElementById('playerName').textContent = player1
         return player1, player2
     }
 
 })
 
+restart.addEventListener('click', () => {
+    window.location.reload();
+})
 
 
 

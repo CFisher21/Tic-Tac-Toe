@@ -20,7 +20,7 @@
     font-size: 48px;
     font-weight: 700;
     font-family: 'Courier New', Courier, monospace;
-    color: #f6511d;
+    color: #ffb400;
     
 }
 
@@ -72,4 +72,40 @@ html {
 .playerName {
     color: #f6511d;
     
+}
+
+.button {
+    height: 60px;
+    width: 100px;
+    font-size: larger;
+    font-weight: 700;
+    color: white;
+    background-color: #f6511d;
+    border: 2px solid #00a6ed;
+    border-radius: 4px;
+    margin: 16px;
+}
+
+
+@media (max-width: 600px) {
+    
+    .title {
+        font-size: 32px;
+    }
+
+    .player {
+        font-size: 24px;
+    }
+
+    .gameboard {
+        width: 375px;
+    }
+    
+    .gameplace {
+        height: 125px;
+    }
+
+    .currentPlayer{
+        font-size: 32px;
+    }
 }
